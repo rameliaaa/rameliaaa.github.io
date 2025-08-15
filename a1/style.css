@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Jost", sans-serif;
+  background-image: linear-gradient(rgb(167, 147, 160), rgb(235, 150, 189));
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: lightslategray;
+}
