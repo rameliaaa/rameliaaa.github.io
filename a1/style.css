@@ -8,5 +8,15 @@ body {
 h1 {
   font-size: 2rem;
   text-align: center;
-  color: lightslategray;
+  color: rgb(29, 44, 58);
+}
+.gridBox {
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  height: 20rem;
+  width: 60%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 10fr 15fr 12fr;
+
+  align-items: stretch;
 }
