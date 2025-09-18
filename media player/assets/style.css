@@ -1,0 +1,36 @@
+/* store my custome variables*/
+:root {
+    --colour-01: white;
+    --colour-02: blue;
+    --colour-03: coral;
+    --colour-04: pink;
+     --boarder: solid coral 2px;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.6;
+    background-color: var(--colour-04)
+    color: var(var(--colour-01))
+}
+
+h1{
+font-size: 2rem
+}
+    
+nav{
+    border: var(--boarder);
+    padding: 1rem
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:100%
+   border: var(--boarder);
+ 
+
+}
