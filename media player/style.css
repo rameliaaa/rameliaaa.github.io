@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Single+Ink:wght@100..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* store my custome variables*/
 :root {
   /* I picked this colour pallete beacuse */
@@ -8,6 +10,7 @@
   --boarder: solid pink 2px;
 }
 body {
+  font-family: "Bitcount Single Ink", system-ui;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,17 +18,18 @@ body {
   gap: 1rem;
   line-height: 1.6;
   background-color: var(--colour-03);
-  color: var(--colour-01);
+  color: var(--colour-04);
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 nav {
   border: var(--boarder);
-  padding: 1rem;
+  padding: 2rem;
   color: rgb(156, 156, 232);
+  font-family: "Cormorant Garamond", serif;
 }
 
 footer {
