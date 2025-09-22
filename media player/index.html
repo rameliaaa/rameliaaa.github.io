@@ -14,44 +14,47 @@
   <body>
 <!--this is my page heading-->
     <header>
-        <h1>My Media Player</h1>
+        <h1>Media Player</h1>
     </header>
 <!--this is my nav bar-->
     <nav>
-<a>Home</a>
-<a>Media Player</a>
+<a href="index.html">Home</a>
 <a href="About.html">About</a>
-<a>Contact</a>
+<a href="contact.html" >Contact</a>
 
     </nav>
-
-    <!--this is my main-->
-    <main>
+   
+<!-- this is my main -->
+  <main>
     <!-- this is my media player section -->
-        <section class="mediaPlayerSection">
-            <!-- media player source-->
-             <video id="mediaPlayer" controls>
-                <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
-             This browser doesn't support the video element.
-            </video>
-         <!-- media player controls -->
-          <div class="mediaPlayerControlContainer">
+    <section class="mediaPlayerSection">
+      <!-- media player source -->
+      <video id="mediaPlayer" controls autoplay muted="true">
+        <source id="mediaSource" src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
+        This browser doesn't support the video element.
+      </video>
+
+      <!-- media player controls -->
+      <div class="mediaPlayerControlContainer">
           <button id="playPauseButton">
           ▶︎
           <!--‖-->
         </button>
-        <progress id="timelineProgress" max="100" value="50" ></progress>
-        <!-- adding in a time feedback section : let users know how long the video is and its current time-->
-         <p class="timeContainer">
-            <span id="currentTimeFeedbck" >0:00 </span>
-            /
-         </p>
+         <progress id="timelineProgress" max="100" value="0"></progress>
+        <!-- adding in a time feedback section : let users know how long the video is and its current time -->
+        <p class="timeContainer">
+          <span id="currentTimeFeedback">0:00</span>
+          /
+          <span id="totalTimeFeedback">4:30</span>
         </p>
-        </div>
-     </section>
-    </main>
-
-    <!--our footer contains our attributions-->
+      </div>
+    </section>
+  </main>
+<!-- Faced a lot of trial and error with my video media player however I was able to get the 
+ play pause button to work as well as a movable timeline.These features enhance user engagement by 
+ giving them choice about rewatching and stopping at points within the video.
+ -->
+    <!-- footer containing my attributions-->
        
     <footer>
       <p>&copy; 2024 Media Player Website. All rights reserved.</p>

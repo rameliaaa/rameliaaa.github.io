@@ -1,29 +1,31 @@
 /* find the elements i want to interact with */
-const VideoElement = document.querySelector("#mediaPlayer");
+const videoElement = document.querySelector("#mediaPlayer");
 const playPauseButton = document.querySelector("#playPauseButton");
+const playPauseIcon = document.querySelector("#playPauseIcon");
 const timeline = document.querySelector("#timelineProgress");
 const currentTimeText = document.querySelector("#currentTimeFeedback");
 const totalTimeText = document.querySelector("#totalTimeFeedback");
+const mediaSource = document.querySelector("#mediaSource");
 
-/*when JS loads remove defult controls */
-VideoElement.removeAttribute("controls");
+/* when JS loads remove default controls */
+videoElement.removeAttribute("controls");
 
-//I want to update the totqal time based on the currently loaded ,edia file
-//this will run when page loads, but if i wanted to change the file afterwards, i'd have to
+// I want to update total time based on the currently loaded media file
+// this will run when page loads, but if I wanted to change the file afterwards, I'd have to
 // update there too
-VideoElement.addEventListener("canplay", updateTotalTime);
+videoElement.addEventListener("canplay", updateTotalTime);
 
 function updateTotalTime() {
-  let videoSeconds = VideoElement.duration;
+  let videoSeconds = videoElement.duration;
   let totalMin = Math.floor(videoSeconds / 60);
   let totalSec = videoSeconds % 60;
   if (totalSec < 10) {
     totalSec = "0" + totalSec;
   }
-  totalTimeText.textContent = `${totalMin} :${totalSec}`;
+  totalTimeText.textContent = `${totalMin}:${totalSec}`;
 }
 /*
-Play/pause button behaviour:\When I click it begins the playback of the mmedia file
+Play/pause button behaviour:\When I click it begins the playback of the media file
 if media is not playing- when I click it begins playback of the media file 
 When I click it again it pauses of the media file
 Feedback:
@@ -32,11 +34,11 @@ cusor change on hover
 */
 
 function playPause() {
-  if (VideoElement.paused || VideoElement.ended) {
-    VideoElement.play();
+  if (videoElement.paused || videoElement.ended) {
+    videoElement.play();
     playPauseButton.textContent = "‖";
   } else {
-    VideoElement.pause();
+    videoElement.pause();
     playPauseButton.textContent = "▶︎";
   }
 }
@@ -49,16 +51,16 @@ i should be able to click and jump to particular time
 */
 
 function updateTimeline() {
-  console.log(VideoElement.currentTime);
+  console.log(videoElement.currentTime);
   /* find percentage of total time */
-  let timePercent = (VideoElement.currentTime / VideoElement.duration) * 100;
+  let timePercent = (videoElement.currentTime / videoElement.duration) * 100;
   //console.log(timePercent);
   timeline.value = timePercent;
   updateCurrentTime();
 }
 
 function updateCurrentTime() {
-  let videoSeconds = VideoElement.currentTime;
+  let videoSeconds = videoElement.currentTime;
   let totalMin = Math.floor(videoSeconds / 60);
   let totalSec = Math.floor(videoSeconds % 60);
   if (totalSec < 10) {
@@ -66,8 +68,7 @@ function updateCurrentTime() {
   }
   currentTimeText.textContent = `${totalMin}:${totalSec}`;
 }
-
-VideoElement.addEventListener("timeupdate", updateTimeline);
+videoElement.addEventListener("timeupdate", updateTimeline);
 
 // find when I click my timeline and then jump to appropriate time
 timeline.addEventListener("click", jumpToTime);

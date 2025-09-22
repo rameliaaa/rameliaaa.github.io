@@ -1,16 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Single+Ink:wght@100..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poiret+One&display=swap");
+
 /* store my custome variables*/
 :root {
-  /* I picked this colour pallete beacuse */
+  /* I picked this colour pallete beacuse I felt it complimented the video art, 
+  following along wth similar colours used throughout the video as well as variations of these colours*/
   --colour-01: rgb(255, 255, 255);
-  --colour-02: blue;
-  --colour-03: rgb(59, 12, 83);
-  --colour-04: pink;
-  --boarder: solid pink 2px;
+  --colour-02: rgb(97, 97, 243);
+  --colour-03: rgb(225, 177, 225);
+  --colour-04: rgb(42, 13, 43);
+  --boarder: solid rgb(42, 13, 43) 2px;
 }
+/*I chose a light lavender colour for my background, letting the video and typography stand out and be easy to read/view*/
+
+/*My typeface for the body typeface remained minimalist and easy to read. */
 body {
-  font-family: "Bitcount Single Ink", system-ui;
+  font-family: "Comfortaa", sans-serif;
+  font-size: small;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,17 +26,35 @@ body {
   line-height: 1.6;
   background-color: var(--colour-03);
   color: var(--colour-04);
+  padding: 1rem 2rem 20px 30px;
+  margin: auto;
+  font-weight: bold;
 }
+/*My typography colour consists of a dark purple to protrude from the light purple background, 
+whilst creating an overall harmonious feel.*/
 
+/*The typeface for the header’s were chosen from google fonts, 
+felt futuristic and structured to mimic what I feel like the artist’s style is.*/
 h1 {
-  font-size: 4rem;
+  font-family: "Major Mono Display", monospace;
+  font-weight: 100;
+  font-style: normal;
+  font-family: "Major Mono Display", monospace;
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
 }
-
+/*I used a dotted border around my navigation which I got the code from HTML Tutorial, 
+I felt it gave a bit more movement and playfulness to the top half of the webpage.*/
 nav {
   border: var(--boarder);
+  border-style: dotted;
   padding: 2rem;
-  color: rgb(156, 156, 232);
-  font-family: "Cormorant Garamond", serif;
+  color: rgb(47, 47, 235);
+  font-family: "Comfortaa", sans-serif;
 }
 
 footer {
