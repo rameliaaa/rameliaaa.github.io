@@ -1,0 +1,32 @@
+body {
+  background-color: #03001f;
+  display: flex;
+  margin: auto;
+  max-width: 1000px;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  color: beige;
+  font-family: "Comfortaa", sans-serif;
+  font-size: small;
+}
+.star-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 100px;
+  padding: 200px;
+}
+.star {
+  font-size: 60px;
+  cursor: pointer;
+}
+
+float: left;
+position: relative;
+margin-left: 4%;
+#img {
+  padding-top: 4px;
+  width: 10px;
+  height: 20px;
+}
